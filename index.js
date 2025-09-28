@@ -39,7 +39,7 @@ function startFixedSchedule() {
     try {
       const ch = await client.channels.fetch(fixedChannelId);
       if (!ch || ch.type !== ChannelType.GuildText) return;
-      await ch.send(`@everyone ${messages[m]}`); // no @everyone by default; add if you want
+      await ch.send(`@everyone ${fixedMessages[m]}`); // no @everyone by default; add if you want
     } catch (e) {
       console.error('Fixed schedule send failed:', e);
     }
